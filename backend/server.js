@@ -2,7 +2,10 @@ import express from "express";
 import mongoose from "mongoose";
 import "dotenv/config";
 import authRoutes from "./routes/auth.js";
+import storiesRoutes from "./routes/stories.js";
+import scraperRoutes from "./routes/scraper.js";
 
+import cors from "cors";
 const app = express();
 const PORT = process.env.PORT || 5000;
 app.use(cors({ origin: process.env.CLIENT_URL || "http://localhost:5173", credentials: true }));
